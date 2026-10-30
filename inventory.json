@@ -7,6 +7,11 @@
     "miles": 88716,
     "vin": "2HGFE2F20NH509266",
     "title": "Rebuilt Title",
-    "images": []
+    "images": [
+      "assets/vehicles/2HGFE2F20NH509266/1-front-left.jpg",
+      "assets/vehicles/2HGFE2F20NH509266/2-front.jpg",
+      "assets/vehicles/2HGFE2F20NH509266/3-front-right.jpg",
+      "assets/vehicles/2HGFE2F20NH509266/4-rear-left.jpg"
+    ]
   }
 ]
