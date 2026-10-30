@@ -83,5 +83,28 @@
       "assets/vehicles/4T1B11HK8KU782198/11-backup-camera.jpg",
       "assets/vehicles/4T1B11HK8KU782198/12-odometer.jpg"
     ]
+  },
+  {
+    "year": 2023,
+    "make": "Toyota",
+    "model": "Camry SE",
+    "price": 15500,
+    "miles": 68183,
+    "vin": "4T1G11AK5PU721768",
+    "title": "Rebuilt Title",
+    "images": [
+      "assets/vehicles/4T1G11AK5PU721768/01-front-right.jpg",
+      "assets/vehicles/4T1G11AK5PU721768/02-front.jpg",
+      "assets/vehicles/4T1G11AK5PU721768/03-front-left.jpg",
+      "assets/vehicles/4T1G11AK5PU721768/04-left-side.jpg",
+      "assets/vehicles/4T1G11AK5PU721768/05-rear-left.jpg",
+      "assets/vehicles/4T1G11AK5PU721768/06-rear.jpg",
+      "assets/vehicles/4T1G11AK5PU721768/07-rear-right.jpg",
+      "assets/vehicles/4T1G11AK5PU721768/08-right-side.jpg",
+      "assets/vehicles/4T1G11AK5PU721768/09-driver-seat.jpg",
+      "assets/vehicles/4T1G11AK5PU721768/10-infotainment.jpg",
+      "assets/vehicles/4T1G11AK5PU721768/11-backup-camera.jpg",
+      "assets/vehicles/4T1G11AK5PU721768/12-odometer.jpg"
+    ]
   }
 ]
