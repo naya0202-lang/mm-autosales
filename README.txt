@@ -1,6 +1,6 @@
 M&M Used Auto Sales website
 Files:
-- index.html = website
+- functions/ = the website pages (homepage and vehicle pages, Spanish and English)
 - inventory.json = inventory data
 - assets/logo.jpg = official logo
 - assets/vehicles/<VIN>/ = photos for each vehicle (one folder per vehicle)
@@ -26,8 +26,12 @@ to browse all photos (arrows, keyboard left/right, or swipe on a phone).
 
 The site automatically builds the inventory cards and search filters from inventory.json.
 
-Search engines (Google):
-Each vehicle in inventory.json automatically gets its own page at
-/inventario/<year-make-model-vin>, and /sitemap.xml lists them all. Nothing extra
-to do when adding a car. The server code for this is in functions/ (Cloudflare
-Pages Functions); shared styles are in assets/site.css, the photo viewer in assets/gallery.js.
+Website pages and languages:
+The site is in Spanish (/) and English (/en/), with an ES | EN switch at the top.
+Pages are built by Cloudflare Pages Functions in functions/ from inventory.json:
+  /                          Spanish homepage      /en/                      English homepage
+  /inventario/<car>          Spanish vehicle page  /en/inventory/<car>       English vehicle page
+  /sitemap.xml               every page in both languages, for Google
+All visible text for both languages is in functions/_lib.js (the T object).
+Each vehicle in inventory.json automatically gets its pages in both languages - nothing extra to do.
+Shared styles: assets/site.css. Photo viewer: assets/gallery.js. Homepage filters: assets/home.js.

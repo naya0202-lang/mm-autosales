@@ -3,7 +3,7 @@
 let gal=[],gi=0;
 function openGallery(list,title,start){gal=list||[];if(!gal.length)return;gi=start||0;galTitle.textContent=title;showPhoto();gallery.showModal()}
 function showPhoto(){
- galImg.src=gal[gi];galImg.alt=`${galTitle.textContent} – foto ${gi+1}`;galCount.textContent=`${gi+1} / ${gal.length}`;
+ galImg.src=gal[gi];galImg.alt=`${galTitle.textContent} – ${document.documentElement.lang=="en"?"photo":"foto"} ${gi+1}`;galCount.textContent=`${gi+1} / ${gal.length}`;
  document.querySelectorAll(".gal-nav").forEach(b=>b.hidden=gal.length<2);
  [gi+1,gi-1].forEach(k=>{if(gal.length>1)new Image().src=gal[(k+gal.length)%gal.length]}) // preload neighbours
 }
