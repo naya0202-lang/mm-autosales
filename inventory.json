@@ -37,5 +37,28 @@
       "assets/vehicles/3CZRU6H39MM746960/12-backup-camera.jpg",
       "assets/vehicles/3CZRU6H39MM746960/13-odometer.jpg"
     ]
+  },
+  {
+    "year": 2020,
+    "make": "Honda",
+    "model": "Civic Sport",
+    "price": 11800,
+    "miles": 47706,
+    "vin": "2HGFC2F84LH546831",
+    "title": "Rebuilt Title",
+    "images": [
+      "assets/vehicles/2HGFC2F84LH546831/01-front-right.jpg",
+      "assets/vehicles/2HGFC2F84LH546831/02-front.jpg",
+      "assets/vehicles/2HGFC2F84LH546831/03-front-left.jpg",
+      "assets/vehicles/2HGFC2F84LH546831/04-left-side.jpg",
+      "assets/vehicles/2HGFC2F84LH546831/05-rear-left.jpg",
+      "assets/vehicles/2HGFC2F84LH546831/06-rear.jpg",
+      "assets/vehicles/2HGFC2F84LH546831/07-rear-right.jpg",
+      "assets/vehicles/2HGFC2F84LH546831/08-right-side.jpg",
+      "assets/vehicles/2HGFC2F84LH546831/09-driver-seat.jpg",
+      "assets/vehicles/2HGFC2F84LH546831/10-center-console.jpg",
+      "assets/vehicles/2HGFC2F84LH546831/11-backup-camera.jpg",
+      "assets/vehicles/2HGFC2F84LH546831/12-odometer.jpg"
+    ]
   }
 ]
