@@ -112,6 +112,13 @@ export const galleryDialog = (t) => `<dialog id="gallery" aria-label="${t.galler
 </dialog>
 <script src="/assets/gallery.js"></script>`;
 
+// Small inline flags for the ES | EN switch (emoji flags show as letters on Windows)
+export const FLAGS = {
+  es: `<svg viewBox="0 0 750 500" aria-hidden="true"><rect width="750" height="500" fill="#c60b1e"/><rect y="125" width="750" height="250" fill="#ffc400"/></svg>`,
+  en: `<svg viewBox="0 0 190 100" aria-hidden="true"><rect width="190" height="100" fill="#b22234"/><path d="M0 11.54h190M0 26.92h190M0 42.31h190M0 57.69h190M0 73.08h190M0 88.46h190" stroke="#fff" stroke-width="7.69"/><rect width="76" height="53.85" fill="#3c3b6e"/></svg>`,
+};
+const LANG_NAMES = { es: "Español", en: "English" };
+
 const SECTIONS = ["home", "inventory", "finder", "apply", "about"];
 
 // alternates: { es: "/path", en: "/en/path" } — drives canonical, hreflang tags and the ES | EN switch.
@@ -124,7 +131,7 @@ export function page({ lang, title, description, alternates, image, jsonld = [],
        ...LANGS.map((l) => `<link rel="alternate" hreflang="${l}" href="${SITE + alternates[l]}">`),
        `<link rel="alternate" hreflang="x-default" href="${SITE + alternates.es}">`].join("\n")
     : `<meta name="robots" content="noindex">`;
-  const langLink = (l) => `<a href="${sw[l]}" hreflang="${l}" lang="${l}"${l === lang ? ' class="on" aria-current="true"' : ""}>${l.toUpperCase()}</a>`;
+  const langLink = (l) => `<a href="${sw[l]}" hreflang="${l}" lang="${l}" aria-label="${LANG_NAMES[l]}"${l === lang ? ' class="on" aria-current="true"' : ""}>${FLAGS[l]}${l.toUpperCase()}</a>`;
   const html = `<!doctype html>
 <html lang="${lang}">
 <head>
@@ -148,7 +155,7 @@ ${head}
 ${jsonld.map((j) => `<script type="application/ld+json">${jsonForScript(j)}</script>`).join("\n")}
 </head>
 <body>
-<div class="top"><span>📍 410 Fairdale Rd., Suite A, Fairdale, KY 40118</span><span>📞 ${PHONE}</span><span class="lang">${langLink("es")} | ${langLink("en")}</span></div>
+<div class="top"><span>📍 410 Fairdale Rd., Suite A, Fairdale, KY 40118</span><span>📞 ${PHONE}</span><span class="lang">${langLink("es")}${langLink("en")}</span></div>
 <header>
 <a href="${home}"><img class="logo" src="/assets/logo.jpg" alt="M&M Used Auto Sales LLC"></a>
 <nav>${SECTIONS.map((id, i) => `<a href="${home}#${id}">${t.nav[i]}</a>`).join("")}</nav>
