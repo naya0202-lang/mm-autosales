@@ -114,8 +114,8 @@ export const galleryDialog = (t) => `<dialog id="gallery" aria-label="${t.galler
 
 // Small inline flags for the ES | EN switch (emoji flags show as letters on Windows)
 export const FLAGS = {
-  es: `<svg viewBox="0 0 750 500" aria-hidden="true"><rect width="750" height="500" fill="#c60b1e"/><rect y="125" width="750" height="250" fill="#ffc400"/></svg>`,
-  en: `<svg viewBox="0 0 190 100" aria-hidden="true"><rect width="190" height="100" fill="#b22234"/><path d="M0 11.54h190M0 26.92h190M0 42.31h190M0 57.69h190M0 73.08h190M0 88.46h190" stroke="#fff" stroke-width="7.69"/><rect width="76" height="53.85" fill="#3c3b6e"/></svg>`,
+  es: `<svg width="20" height="14" viewBox="0 0 750 500" aria-hidden="true"><rect width="750" height="500" fill="#c60b1e"/><rect y="125" width="750" height="250" fill="#ffc400"/></svg>`,
+  en: `<svg width="20" height="14" viewBox="0 0 190 100" aria-hidden="true"><rect width="190" height="100" fill="#b22234"/><path d="M0 11.54h190M0 26.92h190M0 42.31h190M0 57.69h190M0 73.08h190M0 88.46h190" stroke="#fff" stroke-width="7.69"/><rect width="76" height="53.85" fill="#3c3b6e"/></svg>`,
 };
 const LANG_NAMES = { es: "Español", en: "English" };
 
@@ -123,7 +123,21 @@ const SECTIONS = ["home", "inventory", "finder", "apply", "about"];
 
 // alternates: { es: "/path", en: "/en/path" } — drives canonical, hreflang tags and the ES | EN switch.
 // Without alternates (error pages) the page is marked noindex.
-export function page({ lang, title, description, alternates, image, jsonld = [], body, status = 200 }) {
+// Browsers may cache /assets/* for hours, so CSS/JS links carry ?v=<version>. The version is derived
+// from the files' ETags once per deployment (module state resets on every deploy).
+const VERSIONED = ["/assets/site.css", "/assets/gallery.js", "/assets/home.js"];
+let assetVersion;
+async function getAssetVersion({ request, env }) {
+  if (!assetVersion) {
+    const tags = await Promise.all(VERSIONED.map(async (p) => (await env.ASSETS.fetch(new URL(p, request.url))).headers.get("etag") || ""));
+    let h = 5381;
+    for (const ch of tags.join("|")) h = ((h * 33) ^ ch.charCodeAt(0)) >>> 0;
+    assetVersion = h.toString(36);
+  }
+  return assetVersion;
+}
+
+export async function page(ctx, { lang, title, description, alternates, image, jsonld = [], body, status = 200 }) {
   const t = T[lang], home = homePath(lang), other = lang === "en" ? "es" : "en";
   const sw = alternates || { es: "/", en: "/en/" };
   const head = alternates
@@ -164,5 +178,7 @@ ${jsonld.map((j) => `<script type="application/ld+json">${jsonForScript(j)}</scr
 ${body}
 <footer><div class="footer-grid"><div><img class="footer-logo" src="/assets/logo.jpg" alt="M&M Used Auto Sales"><p class="small">QUALITY PRE-OWNED VEHICLES</p></div><div><h3>${t.contact}</h3><p class="small">📞 ${PHONE}<br>📍 410 Fairdale Rd., Suite A<br>Fairdale, KY 40118</p></div><div><h3>${t.infoTitle}</h3><p class="small">${SECTIONS.map((id, i) => `<a href="${home}#${id}">${t.nav[i][0] + t.nav[i].slice(1).toLowerCase()}</a>`).join("<br>")}</p></div></div><p class="small" style="text-align:center;margin-top:30px">© 2026 M&M Used Auto Sales LLC. ${t.rights}</p></footer>
 </body></html>`;
-  return new Response(html, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "public, max-age=300" } });
+  const v = await getAssetVersion(ctx);
+  const out = VERSIONED.reduce((h, p) => h.replaceAll(`"${p}"`, `"${p}?v=${v}"`), html);
+  return new Response(out, { status, headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "public, max-age=300" } });
 }

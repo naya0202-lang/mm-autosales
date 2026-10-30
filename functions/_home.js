@@ -47,7 +47,7 @@ export async function renderHome(ctx, lang) {
 ${galleryDialog(t)}
 <script src="/assets/home.js"></script>`;
 
-  return page({
+  return page(ctx, {
     lang,
     title: t.homeTitle,
     description: t.homeDesc,

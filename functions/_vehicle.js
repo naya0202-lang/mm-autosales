@@ -4,7 +4,7 @@ import { SITE, DEALER, PHONE, TEL, T, esc, money, miles, photos, name, slug, car
 export async function renderVehicle(ctx, lang) {
   const t = T[lang], cars = await loadInventory(ctx);
   const car = cars.find((c) => slug(c) === String(ctx.params.slug).toLowerCase());
-  if (!car) return notFound(lang);
+  if (!car) return notFound(ctx, lang);
 
   const n = name(car), pics = photos(car), mi = miles(car);
   const alternates = { es: carPath("es", car), en: carPath("en", car) };
@@ -61,7 +61,7 @@ ${galleryDialog(t)}
     ],
   };
 
-  return page({
+  return page(ctx, {
     lang,
     title: `${n} – ${money(car.price)} | M&M Used Auto Sales`,
     description,
@@ -73,9 +73,9 @@ ${galleryDialog(t)}
 }
 
 // Sold or mistyped vehicles get a real 404 so Google drops them
-function notFound(lang) {
+function notFound(ctx, lang) {
   const t = T[lang];
-  return page({
+  return page(ctx, {
     lang,
     status: 404,
     title: `${t.goneTitle} | M&M Used Auto Sales`,
