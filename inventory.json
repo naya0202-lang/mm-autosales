@@ -13,5 +13,29 @@
       "assets/vehicles/2HGFE2F20NH509266/3-front-right.jpg",
       "assets/vehicles/2HGFE2F20NH509266/4-rear-left.jpg"
     ]
+  },
+  {
+    "year": 2021,
+    "make": "Honda",
+    "model": "HR-V AWD",
+    "price": 10800,
+    "miles": 93978,
+    "vin": "3CZRU6H39MM746960",
+    "title": "Rebuilt Title",
+    "images": [
+      "assets/vehicles/3CZRU6H39MM746960/01-front-right.jpg",
+      "assets/vehicles/3CZRU6H39MM746960/02-front.jpg",
+      "assets/vehicles/3CZRU6H39MM746960/03-front-left.jpg",
+      "assets/vehicles/3CZRU6H39MM746960/04-left-side.jpg",
+      "assets/vehicles/3CZRU6H39MM746960/05-rear-left.jpg",
+      "assets/vehicles/3CZRU6H39MM746960/06-rear.jpg",
+      "assets/vehicles/3CZRU6H39MM746960/07-rear-right.jpg",
+      "assets/vehicles/3CZRU6H39MM746960/08-right-side.jpg",
+      "assets/vehicles/3CZRU6H39MM746960/09-driver-seat.jpg",
+      "assets/vehicles/3CZRU6H39MM746960/10-rear-seats.jpg",
+      "assets/vehicles/3CZRU6H39MM746960/11-dashboard.jpg",
+      "assets/vehicles/3CZRU6H39MM746960/12-backup-camera.jpg",
+      "assets/vehicles/3CZRU6H39MM746960/13-odometer.jpg"
+    ]
   }
 ]
