@@ -132,5 +132,31 @@
       "assets/vehicles/1GCPWCED8KZ127913/14-backup-camera.jpg",
       "assets/vehicles/1GCPWCED8KZ127913/15-odometer.jpg"
     ]
+  },
+  {
+    "year": 2023,
+    "make": "GMC",
+    "model": "Yukon XL Denali 4x4",
+    "price": 38700,
+    "miles": 39800,
+    "vin": "1GKS2JKL6PR430898",
+    "title": "Rebuilt Title",
+    "images": [
+      "assets/vehicles/1GKS2JKL6PR430898/01-front-right.jpg",
+      "assets/vehicles/1GKS2JKL6PR430898/02-front.jpg",
+      "assets/vehicles/1GKS2JKL6PR430898/03-front-left.jpg",
+      "assets/vehicles/1GKS2JKL6PR430898/04-left-side.jpg",
+      "assets/vehicles/1GKS2JKL6PR430898/05-rear-left.jpg",
+      "assets/vehicles/1GKS2JKL6PR430898/06-rear-right.jpg",
+      "assets/vehicles/1GKS2JKL6PR430898/07-right-side.jpg",
+      "assets/vehicles/1GKS2JKL6PR430898/08-engine.jpg",
+      "assets/vehicles/1GKS2JKL6PR430898/09-driver-seat.jpg",
+      "assets/vehicles/1GKS2JKL6PR430898/10-second-row.jpg",
+      "assets/vehicles/1GKS2JKL6PR430898/11-third-row.jpg",
+      "assets/vehicles/1GKS2JKL6PR430898/12-infotainment.jpg",
+      "assets/vehicles/1GKS2JKL6PR430898/13-camera-view.jpg",
+      "assets/vehicles/1GKS2JKL6PR430898/14-controls.jpg",
+      "assets/vehicles/1GKS2JKL6PR430898/15-odometer.jpg"
+    ]
   }
 ]
