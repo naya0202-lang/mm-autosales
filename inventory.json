@@ -106,5 +106,31 @@
       "assets/vehicles/4T1G11AK5PU721768/11-backup-camera.jpg",
       "assets/vehicles/4T1G11AK5PU721768/12-odometer.jpg"
     ]
+  },
+  {
+    "year": 2019,
+    "make": "Chevrolet",
+    "model": "Silverado 1500 V8 5.3L",
+    "price": 18500,
+    "miles": 99150,
+    "vin": "1GCPWCED8KZ127913",
+    "title": "Rebuilt Title",
+    "images": [
+      "assets/vehicles/1GCPWCED8KZ127913/01-front-right.jpg",
+      "assets/vehicles/1GCPWCED8KZ127913/02-front.jpg",
+      "assets/vehicles/1GCPWCED8KZ127913/03-front-left.jpg",
+      "assets/vehicles/1GCPWCED8KZ127913/04-front-left-2.jpg",
+      "assets/vehicles/1GCPWCED8KZ127913/05-left-side.jpg",
+      "assets/vehicles/1GCPWCED8KZ127913/06-rear-left.jpg",
+      "assets/vehicles/1GCPWCED8KZ127913/07-rear.jpg",
+      "assets/vehicles/1GCPWCED8KZ127913/08-rear-right.jpg",
+      "assets/vehicles/1GCPWCED8KZ127913/09-right-side.jpg",
+      "assets/vehicles/1GCPWCED8KZ127913/10-right-side-2.jpg",
+      "assets/vehicles/1GCPWCED8KZ127913/11-driver-seat.jpg",
+      "assets/vehicles/1GCPWCED8KZ127913/12-passenger-seat.jpg",
+      "assets/vehicles/1GCPWCED8KZ127913/13-infotainment.jpg",
+      "assets/vehicles/1GCPWCED8KZ127913/14-backup-camera.jpg",
+      "assets/vehicles/1GCPWCED8KZ127913/15-odometer.jpg"
+    ]
   }
 ]
