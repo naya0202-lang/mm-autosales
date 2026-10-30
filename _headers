@@ -1,0 +1,5 @@
+# Preview copies on *.pages.dev must not compete with the real domain in Google
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex

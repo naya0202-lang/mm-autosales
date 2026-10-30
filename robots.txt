@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mmusedautosales.com/sitemap.xml

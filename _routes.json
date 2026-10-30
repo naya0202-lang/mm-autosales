@@ -1,5 +1,5 @@
 {
   "version": 1,
-  "include": ["/HANDOFF.md", "/handoff.md", "/README.txt", "/readme.txt", "/.gitignore", "/functions/*"],
+  "include": ["/inventario", "/inventario/*", "/sitemap.xml", "/HANDOFF.md", "/handoff.md", "/README.txt", "/readme.txt", "/.gitignore", "/functions/*", "/_routes.json"],
   "exclude": []
 }

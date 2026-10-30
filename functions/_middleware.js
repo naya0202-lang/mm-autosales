@@ -1,5 +1,5 @@
 // Repo files that Cloudflare Pages would otherwise publish as-is
-const PRIVATE = /^\/(handoff\.md|readme\.txt|\.gitignore|functions\/.*)$/i;
+const PRIVATE = /^\/(handoff\.md|readme\.txt|\.gitignore|_routes\.json|functions\/.*)$/i;
 
 export async function onRequest({ request, next }) {
   const url = new URL(request.url);

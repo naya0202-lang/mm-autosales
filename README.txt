@@ -25,3 +25,9 @@ Leave "images": [] if there are no photos yet. Clicking the card photo opens a v
 to browse all photos (arrows, keyboard left/right, or swipe on a phone).
 
 The site automatically builds the inventory cards and search filters from inventory.json.
+
+Search engines (Google):
+Each vehicle in inventory.json automatically gets its own page at
+/inventario/<year-make-model-vin>, and /sitemap.xml lists them all. Nothing extra
+to do when adding a car. The server code for this is in functions/ (Cloudflare
+Pages Functions); shared styles are in assets/site.css, the photo viewer in assets/gallery.js.
