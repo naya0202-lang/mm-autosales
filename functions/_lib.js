@@ -123,9 +123,9 @@ const SECTIONS = ["home", "inventory", "finder", "apply", "about"];
 
 // alternates: { es: "/path", en: "/en/path" } — drives canonical, hreflang tags and the ES | EN switch.
 // Without alternates (error pages) the page is marked noindex.
-// Browsers may cache /assets/* for hours, so CSS/JS links carry ?v=<version>. The version is derived
+// Browsers may cache /assets/* and icons for hours, so those links carry ?v=<version>. The version is derived
 // from the files' ETags once per deployment (module state resets on every deploy).
-const VERSIONED = ["/assets/site.css", "/assets/gallery.js", "/assets/home.js"];
+const VERSIONED = ["/assets/site.css", "/assets/gallery.js", "/assets/home.js", "/favicon.ico", "/apple-touch-icon.png", "/assets/icons/icon-32.png", "/assets/icons/icon-192.png"];
 let assetVersion;
 async function getAssetVersion({ request, env }) {
   if (!assetVersion) {
