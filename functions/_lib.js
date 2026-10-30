@@ -45,6 +45,10 @@ ${canonical ? `<link rel="canonical" href="${esc(canonical)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:image" content="${esc(image || SITE + "/assets/logo.jpg")}">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/icon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/site.css">
 ${jsonld.map((j) => `<script type="application/ld+json">${jsonForScript(j)}</script>`).join("\n")}
 </head>
