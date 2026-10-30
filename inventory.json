@@ -60,5 +60,28 @@
       "assets/vehicles/2HGFC2F84LH546831/11-backup-camera.jpg",
       "assets/vehicles/2HGFC2F84LH546831/12-odometer.jpg"
     ]
+  },
+  {
+    "year": 2019,
+    "make": "Toyota",
+    "model": "Camry LE",
+    "price": 13900,
+    "miles": 83136,
+    "vin": "4T1B11HK8KU782198",
+    "title": "Rebuilt Title",
+    "images": [
+      "assets/vehicles/4T1B11HK8KU782198/01-front-right.jpg",
+      "assets/vehicles/4T1B11HK8KU782198/02-front.jpg",
+      "assets/vehicles/4T1B11HK8KU782198/03-front-left.jpg",
+      "assets/vehicles/4T1B11HK8KU782198/04-left-side.jpg",
+      "assets/vehicles/4T1B11HK8KU782198/05-rear-left.jpg",
+      "assets/vehicles/4T1B11HK8KU782198/06-rear.jpg",
+      "assets/vehicles/4T1B11HK8KU782198/07-rear-right.jpg",
+      "assets/vehicles/4T1B11HK8KU782198/08-right-side.jpg",
+      "assets/vehicles/4T1B11HK8KU782198/09-driver-seat.jpg",
+      "assets/vehicles/4T1B11HK8KU782198/10-infotainment.jpg",
+      "assets/vehicles/4T1B11HK8KU782198/11-backup-camera.jpg",
+      "assets/vehicles/4T1B11HK8KU782198/12-odometer.jpg"
+    ]
   }
 ]
