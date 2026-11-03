@@ -34,7 +34,7 @@ export async function renderHome(ctx, lang) {
 
 <section><div class="actions">
 <div class="action"><h3>${t.actions[0][0]}</h3><p>${t.actions[0][1]}</p><a class="btn" href="#inventory">${t.actions[0][2]}</a></div>
-<div class="action" id="apply"><h3>${t.actions[1][0]}</h3><p>${t.actions[1][1]}</p><a class="btn" href="${TEL}">${t.actions[1][2]}</a></div>
+<div class="action" id="apply"><h3>${t.actions[1][0]}</h3><p>${t.actions[1][1]}</p><a class="btn" href="mailto:naya.autofinancial@gmail.com">${t.actions[1][2]}</a></div>
 <div class="action"><h3>${t.actions[2][0]}</h3><p>${t.actions[2][1]}</p><a class="btn" href="${TEL}">${t.actions[2][2]}</a></div>
 </div></section>
 
